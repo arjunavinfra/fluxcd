@@ -63,6 +63,8 @@ done
 # - flux create source git --help --export
 # - flux create kustomization --help  --export
 
+#flux suspend kustomization <name>
+#flux resume kustomization <name>
 # Reconciliation in fluxCD 
 
 # flux cli comments https://fluxcd.io/flux/cmd/
