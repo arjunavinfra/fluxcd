@@ -78,3 +78,8 @@ done
 # flux get all
 # flux get kustomization 
 # flux get sources all
+
+
+# -------------- HelmRepository
+
+# flux  get source helm  --all-namespaces
