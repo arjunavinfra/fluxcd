@@ -25,7 +25,8 @@ bootstraping() {
     --repository=fluxcd \
     --branch=main \
     --path=./clusters/my-cluster \
-    --personal
+    --personal \
+     --components-extra=image-reflector-controller,image-automation-controller
   flux check --pre
 
 }
