@@ -85,3 +85,8 @@ done
 # flux  get source helm  --all-namespaces
 #flux  get source helm  --all-namespacesflux
 #flux  get helmreleases -n default
+
+
+#kubectl get gitrepositories --all-namespaces
+
+# ubectl get helmreleases --all-namespaces ; kubectl get helmcharts --all-namespaces
