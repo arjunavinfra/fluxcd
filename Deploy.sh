@@ -22,7 +22,7 @@ bootstraping() {
   echo $GITHUB_USER
   flux bootstrap github \
     --owner=$GITHUB_USER \
-    --repository=calcus \
+    --repository=fluxcd \
     --branch=main \
     --path=./clusters/my-cluster \
     --personal
