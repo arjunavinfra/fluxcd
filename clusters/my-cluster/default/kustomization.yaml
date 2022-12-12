@@ -2,15 +2,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - podinfo-source.yaml
+- helm-repository.yaml
 
-patches:
-  - patch: |-
-      apiVersion: autoscaling/v2beta2
-      kind: HorizontalPodAutoscaler
-      metadata:
-        name: podinfo
-      spec:
-        minReplicas: 3             
-    target:
-      name: podinfo
-      kind: HorizontalPodAutoscaler
