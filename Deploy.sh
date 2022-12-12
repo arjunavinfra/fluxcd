@@ -63,9 +63,14 @@ done
 # - flux create source git --help --export
 # - flux create kustomization --help  --export
 
+#learn GitRepository and kusatamization , Helm repostiry and helmrelease
+
 #flux suspend kustomization <name>
 #flux resume kustomization <name>
-# Reconciliation in fluxCD 
+# Reconciliation in fluxCD  
+#flux reconcile source git podinfo
+#flux check
+
 
 # flux cli comments https://fluxcd.io/flux/cmd/
 
