@@ -49,3 +49,20 @@ else
 fi
 
 done
+
+## Understand the gitops concept https://www.gitops.tech/#what-is-gitops
+
+# understand basics of helm https://helm.sh/docs/ youtube link : https://www.youtube.com/watch?v=5QRxG02kfYg&list=PLh4KH3LtJvRRaW8Jtp0_4birma5nXlrFj
+
+# fluxCD installation and understand the various controller in it.  https://fluxcd.io/flux/get-started/
+
+# Control components:  https://fluxcd.io/flux/components/source/
+
+# Reconciliation in fluxCD 
+
+# flux cli comments https://fluxcd.io/flux/cmd/
+
+
+# flux get all
+# flux get kustomization 
+# flux get sources all
