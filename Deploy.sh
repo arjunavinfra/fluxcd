@@ -64,27 +64,30 @@ truncate -s 0  clusters/my-cluster/default/GitRepository.yaml
 
  flux create tenant test \
   --with-namespace=test \
-  --export
+  --export 
 
 
 
   flux create source git podinfo \
     --url=https://github.com/arjunavinfra/app-podinfo.git \
-    --namespace=test \
+    --namespace=flux-system \
     --branch=master \
     --export >> clusters/my-cluster/default/GitRepository.yaml 
+
+
 
 
   flux create kustomization podinfo \
     --source=GitRepository/podinfo \
     --path="./kustomize" \
-    --target-namespace=test \
+    --namespace=flux-system \
+    --target-namespace=test\
     --prune=true \
     --interval=60m \
     --wait=true \
     --health-check-timeout=3m \
     --export >>  clusters/my-cluster/default/GitRepository.yaml 
-    
+
 
 flux reconcile ks podinfo  -n test --with-source
 
