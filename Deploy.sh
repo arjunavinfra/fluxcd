@@ -89,4 +89,4 @@ done
 
 #kubectl get gitrepositories --all-namespaces
 
-# ubectl get helmreleases --all-namespaces ; kubectl get helmcharts --all-namespaces
+# kubectl get helmreleases,helmcharts,helmrepositories --all-namespaces
