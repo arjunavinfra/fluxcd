@@ -58,6 +58,37 @@ done
 # fluxCD installation and understand the various controller in it.  https://fluxcd.io/flux/get-started/
 
 # Control components:  https://fluxcd.io/flux/components/source/
+
+truncate -s 0  clusters/my-cluster/default/GitRepository.yaml 
+
+
+ flux create tenant test \
+  --with-namespace=test \
+  --export
+
+
+
+  flux create source git podinfo \
+    --url=https://github.com/arjunavinfra/app-podinfo.git \
+    --namespace=test \
+    --branch=master \
+    --export >> clusters/my-cluster/default/GitRepository.yaml 
+
+
+  flux create kustomization podinfo \
+    --source=GitRepository/podinfo \
+    --path="./kustomize" \
+    --target-namespace=test \
+    --prune=true \
+    --interval=60m \
+    --wait=true \
+    --health-check-timeout=3m \
+    --export >>  clusters/my-cluster/default/GitRepository.yaml 
+    
+
+flux reconcile ks podinfo  -n test --with-source
+
+
 # - flux get source git
 # - flux get kustomization
 # -  flux get kustomization --watch
@@ -91,3 +122,5 @@ done
 #kubectl get gitrepositories --all-namespaces
 
 # kubectl get helmreleases,helmcharts,helmrepositories --all-namespaces
+
+
