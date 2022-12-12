@@ -1,24 +1,24 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: podinfo
-  namespace: default
+  name: traefik
+  namespace: traefik
 spec:
-  interval: 1m
-  url: https://stefanprodan.github.io/podinfo
+  interval: 1m0s
+  url: https://helm.traefik.io/traefik
 
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: podinfo
-  namespace: podinfo
+  name: my-traefik
+  namespace: traefik
 spec:
-  interval: 5m
-  releaseName: podinfo
   chart:
     spec:
-      chart: podinfo
+      chart: traefik
       sourceRef:
         kind: HelmRepository
-        name: podinfo
+        name: traefik
+      version: 9.18.2
+  interval: 1m0s

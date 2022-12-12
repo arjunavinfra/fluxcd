@@ -83,3 +83,5 @@ done
 # -------------- HelmRepository
 
 # flux  get source helm  --all-namespaces
+#flux  get source helm  --all-namespacesflux
+#flux  get helmreleases -n default
