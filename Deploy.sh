@@ -57,6 +57,11 @@ done
 # fluxCD installation and understand the various controller in it.  https://fluxcd.io/flux/get-started/
 
 # Control components:  https://fluxcd.io/flux/components/source/
+# - flux get source git
+# - flux get kustomization
+# -  flux get kustomization --watch
+# - flux create source git --help --export
+# - flux create kustomization --help  --export
 
 # Reconciliation in fluxCD 
 
