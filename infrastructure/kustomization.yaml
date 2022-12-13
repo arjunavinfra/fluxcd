@@ -3,5 +3,6 @@ kind: Kustomization
 
 resources:
   - sources
+  - notifications
  
  # - metalLB
