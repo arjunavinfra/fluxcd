@@ -9,6 +9,9 @@ curl -s https://fluxcd.io/install.sh | sudo bash
 
 . <(flux completion bash)
 
+sudo su -c  ' apt install gnupg sops -y'
+
+
 else 
  echo "Installed the flux"
 fi 
@@ -89,7 +92,7 @@ truncate -s 0  clusters/my-cluster/default/GitRepository.yaml
     --export >>  clusters/my-cluster/default/GitRepository.yaml 
 
 
-flux reconcile ks podinfo  -n test --with-source
+flux reconcile ks podinfo  -n flux-system --with-source
 
 
 # - flux get source git
