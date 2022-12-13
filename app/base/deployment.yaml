@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo
+  name: boltz
 spec:
   minReadySeconds: 3
   revisionHistoryLimit: 5
@@ -12,17 +12,17 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: podinfo
+      app: boltz
   template:
     metadata:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9797"
       labels:
-        app: podinfo
+        app: boltz
     spec:
       containers:
-      - name: podinfod
+      - name: boltz
         image: ghcr.io/stefanprodan/podinfo:6.2.3
         imagePullPolicy: IfNotPresent
         ports:

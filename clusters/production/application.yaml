@@ -10,3 +10,26 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: podinfo
+      namespace: podinfo
+  timeout: 1m
+
+
+
+spec:
+  interval: 5m
+  targetNamespace: podinfo
+  path: ./clusters/my-cluster/podinfo
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: podinfo
+      namespace: podinfo
+  timeout: 1m
