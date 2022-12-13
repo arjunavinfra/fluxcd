@@ -1,12 +1,12 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: helmchart
-metadata:
-  name: app-helm-promotion-sample
-  namespace: flux-system
-spec:
-  chart: ./chart/sample-app
-  sourceRef:
-    name: app-helm-promotion-sample
-    kind: GitRepository
-  interval: 10m
-  reconcileStrategy: Revision
+# apiVersion: source.toolkit.fluxcd.io/v1beta2
+# kind: helmchart
+# metadata:
+#   name: app-helm-promotion-sample
+#   namespace: flux-system
+# spec:
+#   chart: ./chart/sample-app
+#   sourceRef:
+#     name: app-helm-promotion-sample
+#     kind: GitRepository
+#   interval: 10m
+#   reconcileStrategy: Revision

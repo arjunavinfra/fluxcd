@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
 - GitRepository.yaml  
-- HelmChart.yaml  
-- HelmRepository.yaml 
+# - HelmChart.yaml  
+# - HelmRepository.yaml 
