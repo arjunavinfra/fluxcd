@@ -18,7 +18,7 @@
 #     replicaCount: 2
 
 
-apiVersion: source.toolkit.fluxcd.io/v2beta1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmChart
 metadata:
   name: podinfo
