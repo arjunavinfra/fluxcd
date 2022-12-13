@@ -18,17 +18,15 @@
 #     replicaCount: 2
 
 
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
+apiVersion: source.toolkit.fluxcd.io/v2beta1
+kind: HelmChart
 metadata:
   name: podinfo
   namespace: promotion-sample
 spec:
-  interval: 5m
-  chart:
-    spec:
-      chart: podinfo/podinfo
-      sourceRef:
-        kind: HelmRepository
-        name: podinfo
-      interval: 1m
+  chart: ./charts/podinfo
+  sourceRef:
+    name: app-helm-promotion-sample
+    kind: GitRepository
+  interval: 10m
+  reconcileStrategy: Revision
