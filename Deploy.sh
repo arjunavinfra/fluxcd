@@ -1,6 +1,9 @@
 #!/bin/bash -x
 
 
+export GITHUB_TOKEN='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'
+export GITHUB_USER='arjunavinfra'
+
 if [ ! -f /usr/local/bin/flux ]; then 
 
 echo -e "\n Installing fluxCD"
@@ -17,8 +20,6 @@ else
 fi 
 
 
-export GITHUB_TOKEN='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'
-export GITHUB_USER='arjunavinfra'
 
 
 bootstraping() {
