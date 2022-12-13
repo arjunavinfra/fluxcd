@@ -27,7 +27,7 @@ bootstraping() {
     --owner=$GITHUB_USER \
     --repository=fluxcd \
     --branch=main \
-    --path=./clusters/my-cluster \
+    --path=./clusters/production \
     --personal \
      --components-extra=image-reflector-controller,image-automation-controller
   flux check --pre
@@ -62,7 +62,7 @@ done
 
 # Control components:  https://fluxcd.io/flux/components/source/
 
-truncate -s 0  clusters/my-cluster/default/GitRepository.yaml 
+truncate -s 0  clusters/production/default/GitRepository.yaml 
 
 
  flux create tenant test \
@@ -75,7 +75,7 @@ truncate -s 0  clusters/my-cluster/default/GitRepository.yaml
     --url=https://github.com/arjunavinfra/app-podinfo.git \
     --namespace=flux-system \
     --branch=master \
-    --export >> clusters/my-cluster/default/GitRepository.yaml 
+    --export >> clusters/production/default/GitRepository.yaml 
 
 
 
@@ -89,7 +89,7 @@ truncate -s 0  clusters/my-cluster/default/GitRepository.yaml
     --interval=60m \
     --wait=true \
     --health-check-timeout=3m \
-    --export >>  clusters/my-cluster/default/GitRepository.yaml 
+    --export >>  clusters/production/default/GitRepository.yaml 
 
 
 flux reconcile ks podinfo  -n flux-system --with-source
