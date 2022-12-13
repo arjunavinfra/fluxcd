@@ -5,6 +5,6 @@ metadata:
   namespace: flux-system
 spec:
   type: slack
-  channel: general
+  channel: ci-cd-notifications
   secretRef:
     name: slack-url
