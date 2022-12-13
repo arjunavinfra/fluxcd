@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 
-export GITHUB_TOKEN='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'
+export GITHUB_TOKEN=${GITHUB_TOKEN}
 export GITHUB_USER='arjunavinfra'
 
 if [ ! -f /usr/local/bin/flux ]; then 
@@ -54,6 +54,21 @@ else
 fi
 
 done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Understand the gitops concept https://www.gitops.tech/#what-is-gitops
 
