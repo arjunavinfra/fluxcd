@@ -12,3 +12,8 @@ spec:
   secretRef:
     name: flux-system
   url: ssh://git@github.com/arjunavinfra/app-helm-promotion-sample
+  ignore: |
+    # exclude all
+    /*
+    # include charts directory
+    !/charts/ 
