@@ -6,5 +6,3 @@ resources:
   - notifications
   - git-commit-status
   - monitoring
- 
- # - metalLB
