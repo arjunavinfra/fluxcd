@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
  - Provider.yaml  
  - slack-url-secret.yaml
+ - Alert.yaml
