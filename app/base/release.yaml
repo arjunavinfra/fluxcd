@@ -7,11 +7,11 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: sample-app
+      chart: ./chart/sample-app
       version: '0.1.0'
       sourceRef:
-        kind: helmchart
-        name: promotion-sample
+        kind: GitRepository
+        name: app-helm-promotion-sample
         namespace: flux-system
       interval: 1m
   values:
