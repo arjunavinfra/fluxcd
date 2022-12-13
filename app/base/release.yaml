@@ -10,7 +10,7 @@ spec:
       chart: sample-app
       version: '0.1.0'
       sourceRef:
-        kind: HelmRepository
+        kind: helmchart
         name: promotion-sample
         namespace: flux-system
       interval: 1m
