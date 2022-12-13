@@ -63,37 +63,36 @@ done
 
 # Control components:  https://fluxcd.io/flux/components/source/
 
-truncate -s 0  clusters/production/default/GitRepository.yaml 
+# truncate -s 0  clusters/production/default/GitRepository.yaml 
 
 
- flux create tenant test \
-  --with-namespace=test \
-  --export 
-
-
-
-  flux create source git podinfo \
-    --url=https://github.com/arjunavinfra/app-podinfo.git \
-    --namespace=flux-system \
-    --branch=master \
-    --export >> clusters/production/default/GitRepository.yaml 
+#  flux create tenant test \
+#   --with-namespace=test \
+#   --export 
 
 
 
-
-  flux create kustomization podinfo \
-    --source=GitRepository/podinfo \
-    --path="./kustomize" \
-    --namespace=flux-system \
-    --target-namespace=test\
-    --prune=true \
-    --interval=60m \
-    --wait=true \
-    --health-check-timeout=3m \
-    --export >>  clusters/production/default/GitRepository.yaml 
+  # flux create source git podinfo \
+  #   --url=https://github.com/arjunavinfra/app-podinfo.git \
+  #   --namespace=flux-system \
+  #   --branch=master \
 
 
-flux reconcile ks podinfo  -n flux-system --with-source
+
+
+
+  # flux create kustomization podinfo \
+  #   --source=GitRepository/podinfo \
+  #   --path="./kustomize" \
+  #   --namespace=flux-system \
+  #   --target-namespace=test\
+  #   --prune=true \
+  #   --interval=60m \
+  #   --wait=true \
+  #   --health-check-timeout=3m \
+
+
+# flux reconcile ks podinfo  -n flux-system --with-source
 
 
 # - flux get source git
