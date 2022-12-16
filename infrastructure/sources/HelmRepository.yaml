@@ -1,19 +1,8 @@
-# apiVersion: source.toolkit.fluxcd.io/v1beta2
-# kind: HelmRepository
-# metadata:
-#   name: promotion-sample
-#   namespace: flux-system
-# spec:
-#   interval: 1m
-#   url: https://github.com/arjunavinfra/app-helm-promotion-sample.git
-
-
-
-# apiVersion: source.toolkit.fluxcd.io/v1beta2
-# kind: HelmRepository
-# metadata:
-#   name: podinfo
-#   namespace: flux-system
-# spec:
-#   interval: 1m
-#   url: https://stefanprodan.github.io/podinfo
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: podinfo
+  namespace: default
+spec:
+  interval: 1m
+  url:  https://arjunavinfra.github.io/app-helm/charts
