@@ -5,4 +5,4 @@ resources:
   - sources
   - notifications
   - git-commit-status
-  - monitoring
+  # - monitoring
