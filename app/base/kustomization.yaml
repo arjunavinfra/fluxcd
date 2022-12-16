@@ -4,9 +4,19 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - release.yaml
-  # - hpa.yaml
-  # - deployment.yaml
-  # - service.yaml
+
+configMapGenerator:
+  - name: compass-config
+    literals:
+    - FRUIT=apple
+    - VEGETABLE=carrot
+
+secretGenerator:
+  - name: compass-secret
+    literals:
+    - key1=c3VwZXJzZWNyZXQ=
+    - key2=dG9wc2VjcmV0
 
 
-# namespace: pandora
+configurations:
+  - kustomizeconfig.yaml
