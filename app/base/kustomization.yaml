@@ -9,15 +9,13 @@ resources:
 
 configMapGenerator:
   - name: compass-config
-    literals:
-    - FRUIT=apple
-    - VEGETABLE=carrot
+    files:
+      - values.yaml=my-values.yaml
 
 secretGenerator:
   - name: compass-secret
-    literals:
-    - key1=c3VwZXJzZWNyZXQ=
-    - key2=dG9wc2VjcmV0
+    files:
+      - values.yaml=my-values.enc.yaml
 
 
 configurations:
