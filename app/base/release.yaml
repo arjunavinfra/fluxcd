@@ -22,5 +22,5 @@ spec:
     # - kind: Secret
     #   name: compass-secret
 
-    - kind: ConfigMap
-      name: compass-config
+    # - kind: ConfigMap
+    #   name: compass-config
