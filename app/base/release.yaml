@@ -14,5 +14,6 @@ spec:
         name: compass
         namespace: flux-system
       interval: 1m
-  values:
-    replicaCount: 2
+  install: 
+    remediation: 
+      retries: 3
