@@ -12,11 +12,10 @@ configMapGenerator:
     files:
       - values.yaml=my-values.yaml
 
-secretGenerator:
-  - name: compass-secret
-    files:
-      - values.yaml=my-values.enc.yaml
-
+# secretGenerator:
+#   - name: compass-secret
+#     files:
+#       - values.yaml=my-values.enc.yaml
 
 configurations:
   - kustomizeconfig.yaml
