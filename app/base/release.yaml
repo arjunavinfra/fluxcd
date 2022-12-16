@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  TargetNamespace: pandora
+  targetNamespace: pandora
   chart:
     spec:
       chart: helm
