@@ -4,5 +4,3 @@ kind: Kustomization
 bases:
   - "../base"
 
-patchesStrategicMerge:
-  - "hpa.yaml"
