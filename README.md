@@ -1,6 +1,8 @@
 # fluxcd
 A GitOps workflow example for single env deployments with Flux, Kustomize.
 
+Run Deploy.sh for the installation and initilization of fluxCD 
+
 
 kubectl get ka -A
 
