@@ -21,5 +21,7 @@ spec:
   valuesFrom:
     - kind: Secret
       name: compass-secret
+      namespace: pandora
     - kind: ConfigMap
       name: compass-config
+      namespace: pandora
