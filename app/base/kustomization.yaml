@@ -3,7 +3,8 @@ kind: Kustomization
 namespace: pandora
 resources:
   - namespace.yaml
-  - hpa.yaml
-  - deployment.yaml
-  - service.yaml
+  - release.yaml
+  # - hpa.yaml
+  # - deployment.yaml
+  # - service.yaml
 
