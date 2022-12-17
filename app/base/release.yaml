@@ -18,9 +18,9 @@ spec:
   install: 
     remediation: 
       retries: 3
-  # valuesFrom:
+  valuesFrom:
     # - kind: Secret
     #   name: compass-secret
 
-    # - kind: ConfigMap
-    #   name: compass-config
+    - kind: ConfigMap
+      name: compass-config
