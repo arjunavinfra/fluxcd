@@ -21,6 +21,7 @@ spec:
   valuesFrom:
     - kind: Secret
       name: compass-secret
-
     - kind: ConfigMap
       name: compass-config
+  values:
+      type.ClusterIP: LoadBalancer
