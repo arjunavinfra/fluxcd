@@ -5,5 +5,5 @@ resources:
  - namespace.yaml
  - GitRepository.yaml
  - kube-prometheus-stack.yaml
- - monitoring-config-grafana.yaml
- - grafana-annotation.yaml
+#  - monitoring-config-grafana.yaml
+#  - grafana-annotation.yaml
