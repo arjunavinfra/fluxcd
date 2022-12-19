@@ -41,10 +41,14 @@ GPG_ID=`gpg --list-secret-keys "${GPG_NAME}" | grep -B1 "${GPG_COMMENT}" |awk 'N
 
 #Export the public and private key pair from the GPG key and create a kubernetes secret for ArgoCD to read them
 
+pause 
+
 kubectl delete  secret sops-gpg --namespace=argocd 
 gpg --export-secret-keys --armor "${GPG_ID}" | kubectl create secret generic sops-gpg \
 --namespace=flux-system \
 --from-file=sops.asc=/dev/stdin
+
+
 
 #export the public key and store it in the repo, so they can download and use the key to encrypt secrets
 
