@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: podinfod
-          image: ghcr.io/arjunavinfra/podinfo
+          image: ghcr.io/arjunavinfra/podinfo:5.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
