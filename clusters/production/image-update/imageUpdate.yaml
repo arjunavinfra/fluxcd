@@ -9,7 +9,3 @@ spec:
   interval: 1m0s
   secretRef:
     name: regcred
-
-    kubectl create secret generic regcred \
-    --from-file=.dockerconfigjson=.docker/config.json \
-    --type=kubernetes.io/dockerconfigjson
