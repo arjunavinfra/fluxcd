@@ -3,7 +3,7 @@ creation_rules:
     # Specify kms/pgp/etc encryption key
     # This tutorial uses a local PGP key for encryption.
     # DO NOT USE IN PRODUCTION ENV
-    pgp: "139C723E55B6482C9BBCE91D6308E3C41BEB3036"
+    pgp: "CC8D13CE906D9466BFDCECEFE056EF4449385C91"
     # Optionally you can configure to use a providers key store
     # kms: XXXXXX
     # gcp_kms: XXXXXX

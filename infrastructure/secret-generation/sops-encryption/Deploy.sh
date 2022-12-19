@@ -31,13 +31,13 @@ GPG_ID=`gpg --list-secret-keys "${GPG_NAME}" | grep -B1 "${GPG_COMMENT}" |awk 'N
 
 #export the public key and store it in the repo, so they can download and use the key to encrypt secrets
 
-gpg --export --armor "${GPG_ID}" > ../../../clusters/production/.sops.pub.asc
+gpg --export --armor > ../../../clusters/production/.sops.pub.asc
 
 #delete old key if any export the private key as a secrete for decryting fluxCD 
 
 kubectl delete secret sops-gpg -n flux-system
 
-gpg --export-secret-keys --armor 90FABEDB64C3FDE30DF57F5BC3547C79C1DF902E|
+gpg --export-secret-keys --armor  "${GPG_ID}" |
 kubectl create  secret generic sops-gpg \
 --namespace=flux-system \
 --from-file=sops.asc=/dev/stdin
