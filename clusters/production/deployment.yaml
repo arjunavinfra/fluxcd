@@ -18,6 +18,8 @@ spec:
         - name: podinfod
           image: ghcr.io/arjunavinfra/podinfo:5.0.0 # {"$imagepolicy": "flux-system:podinfo"}
           imagePullPolicy: IfNotPresent
+          command:
+            - "sleep 100"
           ports:
             - name: http
               containerPort: 9898
