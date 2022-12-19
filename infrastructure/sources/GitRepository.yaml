@@ -1,19 +1,19 @@
 
----
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: GitRepository
-metadata:
-  name: app-helm-promotion-sample
-  namespace: flux-system
-spec:
-  interval: 1m0s
-  ref:
-    branch: main
-  secretRef:
-    name: flux-system
-  url: ssh://git@github.com/arjunavinfra/app-helm-promotion-sample
-  ignore: |
-    # exclude all
-    /*
-    # include charts directory
-    !/charts/ 
+# ---
+# apiVersion: source.toolkit.fluxcd.io/v1beta2
+# kind: GitRepository
+# metadata:
+#   name: app-helm-promotion-sample
+#   namespace: flux-system
+# spec:
+#   interval: 1m0s
+#   ref:
+#     branch: main
+#   secretRef:
+#     name: flux-system
+#   url: ssh://git@github.com/arjunavinfra/app-helm-promotion-sample
+#   ignore: |
+#     # exclude all
+#     /*
+#     # include charts directory
+#     !/charts/ 
