@@ -1,3 +1,4 @@
+---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
@@ -8,3 +9,4 @@ spec:
   ref:
     branch: main
   url: https://github.com/fluxcd/flux2
+
