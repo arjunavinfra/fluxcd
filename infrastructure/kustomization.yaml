@@ -5,4 +5,5 @@ resources:
   - sources
   - notifications
   - git-commit-status
-  - monitoring
+  - sops-encryption
+  # - monitoring
