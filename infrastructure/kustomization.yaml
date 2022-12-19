@@ -6,4 +6,5 @@ resources:
   - notifications
   - git-commit-status
   - secret-generation
+  - image-update
   # - monitoring
