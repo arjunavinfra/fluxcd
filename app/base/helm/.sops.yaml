@@ -1,6 +1,0 @@
-creation_rules:
-  - path_regex: .*values.yaml$
-    pgp: KEY_ID_ASDF1234
-  - path_regex: ".*\\.yaml"
-    encrypted_regex: ^(data|stringData)$
-    pgp: KEY_ID_ASDF1234

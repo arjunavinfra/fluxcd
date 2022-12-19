@@ -1,40 +1,9 @@
 apiVersion: v1
 data:
-    password: ENC[AES256_GCM,data:F+rOT7PwyoXd87lp,iv:nx9zRcdUdCrWP8YGe/HiblFgEhJgN/hEwN3Nkf7HG0k=,tag:Uk8ntdvIa73QGLV83W5qVw==,type:str]
-    user: ENC[AES256_GCM,data:AShtNdwONGM=,iv:lt2fqt77q0l0ARwMGs8v1Tk0txXE4vAeoOT7+LbOr8o=,tag:z55Kpnp0oBTTfHu4ez98zA==,type:str]
+  key1: c3VwZXJzZWNyZXQ=
+  key2: dG9wc2VjcmV0
 kind: Secret
 metadata:
-    creationTimestamp: null
-    name: basic-auth
-    namespace: default
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age: []
-    lastmodified: "2022-12-19T08:21:32Z"
-    mac: ENC[AES256_GCM,data:C275N0FabLxVoi5qkcR+KR9lDVyARfqMkcWc9Puj+EKblfCFFaDuVkOKtIejCWbXtzZbJUn5shjGvGP9Be+643ZSeAkPJYcGTUfHuuC52hBLvEpG6QG2LejrJYj0A7noB/1A8x3+JcaAuizp6fZeNdrqfv8T5l8Xgk2Xbei/S1M=,iv:LN6R+ExhfHz/0IInn/moRyBBXiSfIBc5Wo6P72+5S1w=,tag:zDeJLhZwMDFzauC5UeRczw==,type:str]
-    pgp:
-        - created_at: "2022-12-19T08:21:31Z"
-          enc: |
-            -----BEGIN PGP MESSAGE-----
-
-            hQIMA9XLOS42/aymAQ/+NGZNJIzIQgTPBxarDVTq4u/wO0uAkKT2paro1xTcO1in
-            aW2hzD5o71rptn/61tIxoxJwsX/kBi2JmYz57zSD+8PPDpFPtgQYBV0LdG2k8Abq
-            aVphvR1iP/HvF4ta42OPkYjLMpheLiAxQHDOZM22TWvlqOC2osip4oyJLIdz2QAE
-            cDRCzI95BvkNxKSwJxwfn9W9Mb1YEobebG9Udw8OMBJ4RuePunUXIKGRr/9wC2+M
-            Jz35AGrUtapg+IfT6vme0823W4LKJ4gjt4/1qjJIgHdk/hMoCa0ppqnEekZIclG7
-            oVge/SwP/7U+ziSOvencUmKinrzpmqfTM8zUvHdKI/TtME9YsFlohEVms7IJUVIk
-            O/B/v2oTTd51zivAIp4C4dg8L/IAGWTDm4YZwE0dSl3++19PVmYMe96xeKZbkyjF
-            zrh2lx2qJmsP3Sj7hTLX5Z8NQw+JbExxsBLuH3vE9uHpMbkCsRCx5m5fIWM2aoZb
-            HKpJPWDi07eLpgy7L2yM2RGlqYbwgw3FzDP7CoscFa1mRM90ENGJ76LIsQNMZMzC
-            GlCqkTR3dmZKEZO+OuKAUvn/Ev5kfid3PgeUIwAymU52Pb4qEIm1cxoIpw2c0A1O
-            wsr44+BqHkTr56YEBo5x/HQMKsq6hszHi5guJxNWQurYyF4n6NZVGXXx1KtVJfXS
-            XgFc+u5Ro/DhfUmsd4PCtSgsb5tMcG2D354L6ZPwPwAx5aeNC7wZWYgeE6YavkL/
-            V5bepZhkyiA8tYMKGkDtbQQ3cduWduGjjGFTAto5amKI6VRln1ZYMfBG8yGuLp0=
-            =dsWU
-            -----END PGP MESSAGE-----
-          fp: CC8D13CE906D9466BFDCECEFE056EF4449385C91
-    encrypted_regex: ^(data|stringData)$
-    version: 3.7.3
+  creationTimestamp: null
+  namespace: default
+  name: my-secret
