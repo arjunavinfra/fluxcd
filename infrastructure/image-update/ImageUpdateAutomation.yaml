@@ -20,7 +20,7 @@ spec:
     push:
       branch: main
   update:
-    path: ./clusters/my-cluster
+    path: ./clusters/production
     strategy: Setters
 
 
