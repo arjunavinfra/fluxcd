@@ -16,18 +16,6 @@ Name-Real: ${GPG_NAME}
 EOF
 
 
- cat <<EOF > .sops
-creation_rules:
-  - encrypted_regex: "^(data|stringData)$"
-    # Specify kms/pgp/etc encryption key
-    # This tutorial uses a local PGP key for encryption.
-    # DO NOT USE IN PRODUCTION ENV
-    pgp: "${GPG_ID}"
-    # Optionally you can configure to use a providers key store
-    # kms: XXXXXX
-    # gcp_kms: XXXXXX
-EOF
-
 #The code above will create an RSA key with 4096 bits. For full configuration of creating GPG keys
 
 
@@ -45,9 +33,12 @@ GPG_ID=`gpg --list-secret-keys "${GPG_NAME}" | grep -B1 "${GPG_COMMENT}" |awk 'N
 
 gpg --export --armor "${GPG_ID}" > ../../../clusters/production/.sops.pub.asc
 
+#delete old key if any export the private key as a secrete for decryting fluxCD 
 
-gpg --export-secret-keys --armor "${GPG_ID}" |
-kubectl create secret generic sops-gpg \
+kubectl delete secret sops-gpg -n flux-system
+
+gpg --export-secret-keys --armor 90FABEDB64C3FDE30DF57F5BC3547C79C1DF902E|
+kubectl create  secret generic sops-gpg \
 --namespace=flux-system \
 --from-file=sops.asc=/dev/stdin
 
@@ -69,3 +60,7 @@ EOF
 
 gpg --delete-secret-keys "${GPG_ID}"
 rm -rf .sops
+
+
+
+#gpg --import ./clusters/production/.sops.pub.asc --for encrypt from local  brfore decrypt the file
