@@ -37,10 +37,10 @@ gpg --export --armor > ../../../clusters/production/.sops.pub.asc
 
 kubectl delete secret sops-gpg -n flux-system
 
-gpg --export-secret-keys --armor  "${GPG_ID}" |
-kubectl create  secret generic sops-gpg \
---namespace=flux-system \
---from-file=sops.asc=/dev/stdin
+# gpg --export-secret-keys --armor  "${GPG_ID}" |
+# kubectl create  secret generic sops-gpg \
+# --namespace=flux-system \
+# --from-file=sops.asc=/dev/stdin
 
 
 
