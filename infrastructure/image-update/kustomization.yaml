@@ -5,4 +5,4 @@ resources:
  - gitlab-regcred.yaml  
  - ImageRepository.yaml
  - ImagePolicy.yaml
- - ImageUpdateAutomation
+ - ImageUpdateAutomation.yaml
