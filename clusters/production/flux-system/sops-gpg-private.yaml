@@ -7,3 +7,14 @@ metadata:
   name: regcred
   namespace: flux-system
 type: kubernetes.io/dockerconfigjson
+
+---
+apiVersion: v1
+data:
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJnaGNyLmlvIjogewoJCQkiYXV0aCI6ICJZWEpxZFc1aGRtbHVabkpoT21kb2NGOU1lazlKYVU5eVdXcFpjVkZuUVdGaVNUbFJZV3A1ZW5sRGNYRTJTVUl4Y3psclZGbz0iCgkJfQoJfQp9
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: regcred
+  namespace: default
+type: kubernetes.io/dockerconfigjson
