@@ -12,14 +12,10 @@ spec:
       labels:
         app: podinfo
     spec:
-      imagePullSecrets:
-       - name: regcred
       containers:
         - name: podinfod
-          image: ghcr.io/arjunavinfra/podinfo:5.0.0 # {"$imagepolicy": "flux-system:podinfo"}
+          image: ghcr.io/arjunavinfra/podinfo:5.0.1
           imagePullPolicy: IfNotPresent
-          command:
-            - "sleep 100"
           ports:
             - name: http
               containerPort: 9898
