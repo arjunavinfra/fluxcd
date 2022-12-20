@@ -29,6 +29,7 @@ bootstraping() {
     --repository=fluxcd \
     --branch=main \
     --path=./clusters/production \
+    --read-write-key \
     --personal \
      --components-extra=image-reflector-controller,image-automation-controller
   flux check --pre
