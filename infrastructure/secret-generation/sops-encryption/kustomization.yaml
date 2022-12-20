@@ -3,4 +3,3 @@ kind: Kustomization
 
 resources:
   - "basic-auth.yaml"
-  - "sops-gpg-private.yaml"
