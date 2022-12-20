@@ -16,7 +16,7 @@ spec:
         - name: regcred
       containers:
         - name: podinfod
-          image: ghcr.io/arjunavinfra/sample-app-web:5.0.1
+          image: arjunavinfra/sample:5.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
