@@ -16,6 +16,7 @@ spec:
         - name: podinfod
           image: ghcr.io/arjunavinfra/podinfo:5.0.0
           imagePullPolicy: IfNotPresent
+          command: [ "sh", "-c", "sleep 1h" ]
           ports:
             - name: http
               containerPort: 9898
