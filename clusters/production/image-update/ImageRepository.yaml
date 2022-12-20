@@ -6,6 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   image: arjunavinfra/sample
-  interval: 1m0s
+  interval: 2m0s
   secretRef:
     name: regcred
+  timeout: 4m
