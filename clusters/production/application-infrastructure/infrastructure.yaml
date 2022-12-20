@@ -6,8 +6,6 @@ metadata:
 spec:
   interval: 10m0s
   path: ./infrastructure
-  dependsOn:
-    - name: application
   prune: true
   sourceRef:
     kind: GitRepository
