@@ -18,7 +18,7 @@ spec:
   #     name: pandora-compass-helm
   #     namespace: pandora
   timeout: 1m
-  decryption:
-    provider: sops
-    secretRef:
-      name: sops-gpg
+  # decryption:
+  #   provider: sops
+  #   secretRef:
+  #     name: sops-gpg
