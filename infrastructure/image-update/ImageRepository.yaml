@@ -9,6 +9,3 @@ spec:
   interval: 1m0s
   secretRef:
     name: regcred
-  properties:
-    accessFrom:
-      timeout: 8m
